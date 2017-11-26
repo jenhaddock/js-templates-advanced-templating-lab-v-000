@@ -8,26 +8,37 @@
   </head>
   <body>
     <main id="main">
-      <script id="recipe-form-template" type="text/x-handlebars-template">
-      <form id ="recipe-form" onsubmit="createRecipe();return false">
-        Name: <input type="text" id="recipeName"/><br>
-        Description: <input type="text" id="recipeDesc"/><br>
-        Ingredients:
-        <div id="ingredients">
-          {{#each ingredients}}
-          <ul>
-            <li><input type="text" name="ingredients"/><br></li>
-            <li><input type="text" name="ingredients"/></br></li>
-            <li><input type="text" name="ingredients"/></br></li>
-            <li><input type="text" name="ingredients"/><br></li>
-            <li><input type="text" name="ingredients"/><br></li>
-         </ul>
-         {{/each}}
-       </div>
-       <input type="submit"/>
-      </form>
-    </script>
     </main>
+    <script id="recipe-form-template" type="text/x-handlebars-template">
+    <form id ="recipe-form" onsubmit="createRecipe();return false">
+      Name: <input type="text" id="recipeName"/><br>
+      Description: <input type="text" id="recipeDesc"/><br>
+      Ingredients:
+      <div id="ingredients">
+        {{#each ingredients}}
+        <ul>
+          <li><input type="text" name="ingredients"/><br></li>
+          <li><input type="text" name="ingredients"/></br></li>
+          <li><input type="text" name="ingredients"/></br></li>
+          <li><input type="text" name="ingredients"/><br></li>
+          <li><input type="text" name="ingredients"/><br></li>
+       </ul>
+       {{/each}}
+     </div>
+     <input type="submit"/>
+    </form>
+    </script>
+    <script id="recipe-template" type="text/x-handlebars-template">
+      {{> recipeDetailsPartial }}
+    </script>
+    <script id="recipe-details-template" type="text/x-handlebars-template">
+      <div>{{ recipeDesc }}</div>
+      <ul>
+       {{#each ingredients}}
+         {{displayIngredient this}}
+       {{/each}}
+     </ul>
+    </script>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>
     <!-- Open this file and call `mocha.run()` in console to run tests -->

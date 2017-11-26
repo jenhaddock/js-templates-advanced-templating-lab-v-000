@@ -11,7 +11,16 @@
       <form id ="recipe-form-template" onsubmit="createRecipe();return false">
         Name: <input type="text" id="recipeName"/>
         Description: <input type="text" id="recipeDesc"/>
-        Ingredients: <input type="text" id="recipeIngredients"/>
+        Ingredients: 
+        {{#each this}}
+        <ul>
+          <li><input type="text" id="recipeIngredient"/>
+          <li><input type="text" id="recipeIngredient"/>
+          <li><input type="text" id="recipeIngredient"/>
+          <li><input type="text" id="recipeIngredient"/>
+          <li><input type="text" id="recipeIngredient"/>     
+      </ul>                     
+       {{/each}}
       </form>
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>

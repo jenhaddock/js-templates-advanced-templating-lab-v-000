@@ -25,11 +25,10 @@
     </script>
 
     <script id="recipe-form-partial" type="text/x-handlebars-template">
-      Name: <input type="text" id="recipeName"/><br>
-      Description: <input type="text" id="recipeDesc"/><br>
+      Name: <input type="text" id="recipeName" value="{{recipeName}}"/><br>
+      Description: <input type="text" id="recipeDesc" value="{{recipeDesc}}"/><br>
       Ingredients:<br>
-      <div id="ingredients">
-        {{#each ingredients}}
+      {{#each ingredients}}
         <ul>
           <li><input type="text" name="ingredients"/><br></li>
           <li><input type="text" name="ingredients"/></br></li>
@@ -43,12 +42,17 @@
     </script>
 
     <script id="recipe-template" type="text/x-handlebars-template">
+      <div id="recipeName">
+        {{recipeName}}
+      </div>
       {{> recipeDetailsPartial }}
       <p><a href="#" onclick="displayEditForm()">Edit Recipe</a></p>
     </script>
 
     <script id="recipe-details-partial" type="text/x-handlebars-template">
-      <div>{{ recipeDesc }}</div>
+      <div id="recipeDesc">
+        {{ recipeDesc }}
+      </div>
       <ul>
        {{#each ingredients}}
          {{displayIngredient this}}

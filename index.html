@@ -9,17 +9,17 @@
   <body>
     <main id="main">
       <form id ="recipe-form-template" onsubmit="createRecipe();return false">
-        Name: <input type="text" id="recipeName"/>
-        Description: <input type="text" id="recipeDesc"/>
-        Ingredients: 
+        Name: <input type="text" id="recipeName"/><br>
+        Description: <input type="text" id="recipeDesc"/><br>
+        Ingredients:
         {{#each this}}
         <ul>
-          <li><input type="text" id="recipeIngredient"/>
-          <li><input type="text" id="recipeIngredient"/>
-          <li><input type="text" id="recipeIngredient"/>
-          <li><input type="text" id="recipeIngredient"/>
-          <li><input type="text" id="recipeIngredient"/>     
-      </ul>                     
+          <li><input type="text" id="recipeIngredient"/><br></li>
+          <li><input type="text" id="recipeIngredient"/></br></li>
+          <li><input type="text" id="recipeIngredient"/></br></li>
+          <li><input type="text" id="recipeIngredient"/><br></li>
+          <li><input type="text" id="recipeIngredient"/><br></li>
+      </ul>
        {{/each}}
       </form>
     </main>

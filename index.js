@@ -28,8 +28,8 @@ function createRecipe(){
   }
 
   let recipe = {
-    'name': name,
-    'description': description,
+    'name': recipeName,
+    'description': recipeDesc,
     'ingredients': ingredients
   }
 

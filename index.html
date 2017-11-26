@@ -8,6 +8,11 @@
   </head>
   <body>
     <main id="main">
+      <form id ="recipe-form-template" onsubmit="createRecipe();return false">
+        Name: <input type="text" id="recipeName"/>
+        Description: <input type="text" id="recipeDesc"/>
+        Ingredients: <input type="text" id="recipeIngredients"/>
+      </form>
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="index.js"></script>

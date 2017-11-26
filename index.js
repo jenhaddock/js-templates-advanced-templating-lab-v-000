@@ -1,10 +1,10 @@
 function init() {
   //put any page initialization/handlebars initialization here
-  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-template").innerHTML);
-  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-template").innerHTML);
+  Handlebars.registerPartial('recipeFormPartial', document.getElementById("recipe-form-partial").innerHTML);
+  Handlebars.registerPartial('recipeDetailsPartial', document.getElementById("recipe-details-partial").innerHTML);
   Handlebars.registerHelper("displayIngredient", function(ingredient){
     return new Handlebars.safeString("<li name='ingredientsList'>" + ingredient + "</li>")
-  });
+  })
 
   let form = Handlebars.compile(document.getElementById('recipe-form-template').innerHTML);
 

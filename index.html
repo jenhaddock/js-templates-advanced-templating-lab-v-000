@@ -12,15 +12,17 @@
         Name: <input type="text" id="recipeName"/><br>
         Description: <input type="text" id="recipeDesc"/><br>
         Ingredients:
-        {{#each this}}
-        <ul>
-          <li><input type="text" id="recipeIngredient"/><br></li>
-          <li><input type="text" id="recipeIngredient"/></br></li>
-          <li><input type="text" id="recipeIngredient"/></br></li>
-          <li><input type="text" id="recipeIngredient"/><br></li>
-          <li><input type="text" id="recipeIngredient"/><br></li>
-      </ul>
-       {{/each}}
+        <div id="ingredients">
+          {{#each ingredients}}
+          <ul>
+            <li><input type="text" id="recipeIngredient"/><br></li>
+            <li><input type="text" id="recipeIngredient"/></br></li>
+            <li><input type="text" id="recipeIngredient"/></br></li>
+            <li><input type="text" id="recipeIngredient"/><br></li>
+            <li><input type="text" id="recipeIngredient"/><br></li>
+         </ul>
+         {{/each}}
+       </div>
       </form>
     </main>
     <script src="node_modules/handlebars/dist/handlebars.min.js"></script>

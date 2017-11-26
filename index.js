@@ -27,8 +27,6 @@ function createRecipe(){
     }
   }
 
-  document.getElementsByTagName("main")[0].innerHTML += pageTemplate();
-
   let recipe = {
     'name': name,
     'description': description,

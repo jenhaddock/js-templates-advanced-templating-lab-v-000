@@ -30,6 +30,5 @@ function createRecipe(){
   }
 
   let template = Handlebars.compile(document.getElementById('recipe-template').innerHTML);
-
   document.getElementById('main').innerHTML = template(recipe);
 }
